@@ -1,0 +1,29 @@
+1.Install the open-api cli generator and download the swagger spec file from the following link
+     - https://api.emailengine.app/
+
+2.Generate the SDK using the command
+     $ openapi-generator-cli generate -i <path to swagger spec file> -g java -o <path to output folder>
+
+3.Generate .jar file for your sdk using the command and the jar file will be generated in the target folder
+     $ mvn clean package
+
+4.Install the jar file in your loacal maven repository using the following command
+      $ mvn install:install-file -Dfile=<Path to your generated jar file> -DgroupId=com.emailengine -DartifactId=emailclient
+       -Dversion=1.0.1 -Dpackaging=jar
+
+5.Include the installed dependency in the pom file like this
+            <dependency>
+				<groupId>com.emailengine</groupId>
+				<artifactId>emailclient</artifactId>
+				<version>1.0.6</version>
+				<scope>system</scope>
+				<systemPath>/home/superops/Desktop/email-client/target/generated-sources/openapi/target/openapi-java-client-2.46.0.jar</systemPath>
+			</dependency>
+
+
+Changes made:
+Make a change in the TokenRestrictions.java file
+AddressRateLimit limit = new AddressRateLimit() [Changed to this from boolean]
+
+Made a change in SubmitApi.java
+final String[] localVarContentTypes = { "*/*" };
