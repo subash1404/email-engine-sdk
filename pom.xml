@@ -55,6 +55,14 @@
 				<version>4.9.3</version>
 			</dependency>
 
+			<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.34</version>
+				<scope>provided</scope>
+			</dependency>
+
 			<dependency>
 				<groupId>io.gsonfire</groupId>
 				<artifactId>gson-fire</artifactId>
@@ -62,13 +70,13 @@
 			</dependency>
 
 
-<!--			<dependency>-->
-<!--				<groupId>com.emailengine</groupId>-->
-<!--				<artifactId>emailclient</artifactId>-->
-<!--				<version>1.0.6</version>-->
-<!--				<scope>system</scope>-->
-<!--				<systemPath>/home/superops/Desktop/email-client/target/generated-sources/openapi/target/openapi-java-client-2.46.0.jar</systemPath>-->
-<!--			</dependency>-->
+			<dependency>
+				<groupId>com.emailengine</groupId>
+				<artifactId>emailclient</artifactId>
+				<version>1.0.1</version>
+				<scope>system</scope>
+				<systemPath>/home/superops/email-client/target/openapi-java-client-2.42.0.jar</systemPath>
+			</dependency>
 
 			<dependency>
 				<groupId>org.springframework.boot</groupId>

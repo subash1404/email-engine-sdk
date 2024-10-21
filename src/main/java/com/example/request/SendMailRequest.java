@@ -1,5 +1,6 @@
 package com.example.request;
 
+
 public class SendMailRequest {
     private Person from;
     private Person to;

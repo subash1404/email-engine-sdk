@@ -22,6 +22,8 @@
 
 
 Changes made:
+Remove all the date and date-time formats in the swagger.json file so that it will get parsed as String
+
 Make a change in the TokenRestrictions.java file
 AddressRateLimit limit = new AddressRateLimit() [Changed to this from boolean]
 

@@ -1,0 +1,47 @@
+Remove all the format : "date" and format : "date-time" fields
+
+/account
+Oauth2Response - "scope": {
+                    "$ref": "#/definitions/Model15"
+                },
+                "tokenType": {
+                    "type": "string",
+                    "example": "Bearer",
+                    "maxLength": 16384
+                },
+
+AccountResponse - "path": {
+                    "type": "string",
+                    "description": "Check changes only on selected paths. Either a single string path or an array of paths. Can use references like `\"\\Sent\"` or `\"\\Inbox\"`. Set to `null` to unset.",
+                    "example":"*"
+                },
+                "connections": {
+                    "type": "integer",
+                    "description": "No of connections",
+                    "example": 1
+                },
+                "syncFrom": {
+                    "type": "string",
+                    "description": "Last sync time",
+                    "example": "2021-02-17T13:43:18.860Z"
+                },
+
+
+/verifyAccount
+imap - "responseText": {
+          "type": "string",
+          "description": "Response Message",
+          "example": "Invalid credentials (Failure)"
+        }
+smtp - "responseText": {
+          "type": "string",
+          "description": "Response Message",
+          "example": "Invalid credentials (Failure)"
+        }
+
+/account/message
+MessageDetails - "path": {
+              "type": "string",
+              "description": "Path refers to the location of the message",
+              "example": "Inbox"
+            },

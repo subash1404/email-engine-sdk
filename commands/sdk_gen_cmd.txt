@@ -1,0 +1,6 @@
+cd ..
+rm -rf email-client/
+openapi-generator-cli generate -i /home/superops/Downloads/swagger.json -g java -o /home/superops/email-client
+cd email-client/
+mvn clean package
+mvn install:install-file -Dfile=/home/superops/email-client/target/openapi-java-client-2.42.0.jar  -DgroupId=com.emailengine -DartifactId=emailclient -Dversion=1.0.1 -Dpackaging=jar

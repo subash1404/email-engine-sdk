@@ -8,9 +8,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
 @ComponentScan({"com.example.service","com.example.controller"})
-@EntityScan("com.example.entity")
-//@EnableJpaRepositories("com.example.repository")
-
 public class GraphQLApplication {
 
 	public static void main(String[] args) {
